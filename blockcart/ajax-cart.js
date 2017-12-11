@@ -702,36 +702,36 @@ $(document).ready(function(){
 		cart_qty = parseInt($('.ajax_cart_quantity').html());
 
 	/* roll over cart */
-	var cart_block = new HoverWatcher('#header #cart_block');
-	var shopping_cart = new HoverWatcher('#shopping_cart');
+	// var cart_block = new HoverWatcher('#header #cart_block');
+	// var shopping_cart = new HoverWatcher('#shopping_cart');
+  //
+	// $("#shopping_cart a:first").hover(
+	// 	function() {
+	// 		$(this).css('border-radius', '3px 3px 0px 0px');
+	// 		if (ajaxCart.nb_total_products > 0 || cart_qty > 0)
+	// 			$("#header #cart_block").stop(true, true).slideDown(450);
+	// 	},
+	// 	function() {
+	// 		$('#shopping_cart a').css('border-radius', '3px');
+	// 		setTimeout(function() {
+	// 			if (!shopping_cart.isHoveringOver() && !cart_block.isHoveringOver())
+	// 				$("#header #cart_block").stop(true, true).slideUp(450);
+	// 		}, 200);
+	// 	}
+	// );
 
-	$("#shopping_cart a:first").hover(
-		function() {
-			$(this).css('border-radius', '3px 3px 0px 0px');
-			if (ajaxCart.nb_total_products > 0 || cart_qty > 0)
-				$("#header #cart_block").stop(true, true).slideDown(450);
-		},
-		function() {
-			$('#shopping_cart a').css('border-radius', '3px');
-			setTimeout(function() {
-				if (!shopping_cart.isHoveringOver() && !cart_block.isHoveringOver())
-					$("#header #cart_block").stop(true, true).slideUp(450);
-			}, 200);
-		}
-	);
-
-	$("#header #cart_block").hover(
-		function() {
-			$('#shopping_cart a').css('border-radius', '3px 3px 0px 0px');
-		},
-		function() {
-			$('#shopping_cart a').css('border-radius', '3px');
-			setTimeout(function() {
-				if (!shopping_cart.isHoveringOver())
-					$("#header #cart_block").stop(true, true).slideUp(450);
-			}, 200);
-		}
-	);
+	// $("#header #cart_block").hover(
+	// 	function() {
+	// 		$('#shopping_cart a').css('border-radius', '3px 3px 0px 0px');
+	// 	},
+	// 	function() {
+	// 		$('#shopping_cart a').css('border-radius', '3px');
+	// 		setTimeout(function() {
+	// 			if (!shopping_cart.isHoveringOver())
+	// 				$("#header #cart_block").stop(true, true).slideUp(450);
+	// 		}, 200);
+	// 	}
+	// );
 
 	$(document).on('click', '.delete_voucher', function(){
 		$.ajax({
